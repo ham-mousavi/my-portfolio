@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons"; // Import the specific icons
 import { Link } from "react-router-dom"
 
 interface INavigationProps {
@@ -20,19 +22,8 @@ const Navigation = (props: INavigationProps) => {
                 <ul className="mr-8"><Link to="/projects">Projects</Link></ul>
                 <ul className="mr-8"><Link to="/contact">Contact</Link></ul>
                 <button className="mr-8" onClick={toggleDarkMode}>
-                    {darkMode ? "Light" : "Dark"}
+                    <FontAwesomeIcon icon={darkMode ? faSun : faMoon} />
                 </button>
-
-                {/* 
-                <ul className="mr-8"> 
-                    <div className="bg-white dark:bg-black"></div> 
-                </ul> 
-            */}
-
-                {/* 
-                <FontAwesomeIcon icon="fa-light fa-moon" /> 
-                <FontAwesomeIcon icon="fa-light fa-sun-bright" /> 
-            */}
             </ul>
         </nav>
     )
