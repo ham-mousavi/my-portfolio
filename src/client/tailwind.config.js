@@ -1,14 +1,29 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./index.html"],
+  darkMode: ['class', '[class*="dark"]'],
   theme: {
     extend: {
       colors: {
-        'MyGray': '808080',
-        'MyFeijoa': 'A4DC7C',
-        'MyOrange': 'E07D54',
-        'MyYellowGeranium': 'FFE1A0',
-        'MySkyBlue': '8BC3E4'
+        'my-gray': '#808080',
+
+        'my-feijoa':     '#A4DC7C',
+        'my-feijoa-inv': '#5b2383',
+        
+        'my-orange': '#E07D54',
+        
+        'my-yellow-geranium':     '#FFE1A0',
+        'my-yellow-geranium-inv': '#3D2C02',
+        
+        'my-skyblue':     '#8BC3E4',
+        'my-skyblue-inv': '#713a1a',
+      },
+      fontFamily: {
+        'Enriqueta': ['Enriqueta'],
+        'Ephesis': ['Ephesis'], 
+
+        // default font
+        sans: ['Enriqueta'],
       }
     },
   },

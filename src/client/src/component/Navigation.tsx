@@ -1,13 +1,40 @@
 import { Link } from "react-router-dom"
 
-const Navigation = () => {
+interface INavigationProps {
+    darkMode: boolean,
+    setDarkMode: Function
+}
+
+const Navigation = (props: INavigationProps) => {
+    const { darkMode, setDarkMode } = props
+    const toggleDarkMode = () => setDarkMode(!darkMode)
+
     return (
-        <ul>
-            <ul><Link to="/articles">Articles</Link></ul>
-            <ul><Link to="/about">About</Link></ul>
-            <ul><Link to="/projects">Projects</Link></ul>
-            <ul><Link to="/contact">Contact</Link></ul>
-        </ul>
+        <nav className="w-full h-16 content-center dark:bg-my-gray dark:text-white">
+            <div className="inline ml-8">
+                HM
+            </div>
+            <ul className="list-none inline-flex float-right">
+                <ul className="mr-8"><Link to="/articles">Articles</Link></ul>
+                <ul className="mr-8"><Link to="/about">About</Link></ul>
+                <ul className="mr-8"><Link to="/projects">Projects</Link></ul>
+                <ul className="mr-8"><Link to="/contact">Contact</Link></ul>
+                <button className="mr-8" onClick={toggleDarkMode}>
+                    {darkMode ? "Light" : "Dark"}
+                </button>
+
+                {/* 
+                <ul className="mr-8"> 
+                    <div className="bg-white dark:bg-black"></div> 
+                </ul> 
+            */}
+
+                {/* 
+                <FontAwesomeIcon icon="fa-light fa-moon" /> 
+                <FontAwesomeIcon icon="fa-light fa-sun-bright" /> 
+            */}
+            </ul>
+        </nav>
     )
 }
 
