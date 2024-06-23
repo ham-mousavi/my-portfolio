@@ -14,7 +14,7 @@ const Navigation = (props: INavigationProps) => {
     return (
         <nav className="w-full h-16 content-center dark:bg-my-gray dark:text-white">
             <div className="inline ml-8">
-                HM
+                <Link to="/">HM</Link>
             </div>
             <ul className="list-none inline-flex float-right">
                 <ul className="mr-8"><Link to="/articles">Articles</Link></ul>
