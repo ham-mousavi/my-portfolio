@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       colors: {
         'my-gray': '#808080',
+        'my-white-smoke': '#F3F3F3',
 
         'my-feijoa':     '#A4DC7C',
         'my-feijoa-inv': '#5b2383',

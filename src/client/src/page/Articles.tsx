@@ -1,7 +1,9 @@
 const Articles = () => {
     return (
         <main>
-            this is the Articles
+            <div className="">
+                this is the Articles
+            </div>
         </main>
     )
 }
